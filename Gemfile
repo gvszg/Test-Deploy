@@ -15,7 +15,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem "paranoia", "~> 2.0" # 軟刪除
-gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'carrierwave'#, github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'ckeditor'
 gem 'will_paginate', '~> 3.0.5'
@@ -53,5 +53,5 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-sidekiq'
-  gem 'guard-livereload', '~> 2.5', require: false
+  # gem 'guard-livereload', '~> 2.5', require: false
 end
