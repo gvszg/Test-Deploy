@@ -1,10 +1,10 @@
 set :application, 'monmonhouse'
-set :deploy_user, 'deploy'
+set :deploy_user, 'gvszg'
 
 
 # setup repo details
 set :scm, :git
-set :repo_url, 'git@github.com:kosbrother/mongmongwoo.git'
+set :repo_url, 'git@github.com:gvszg/Test-Deploy.git'
 
 # setup rbenv.
 set :rbenv_type, :system

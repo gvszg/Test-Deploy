@@ -53,5 +53,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-sidekiq'
+  gem'capistrano-cookbook', require: false
   # gem 'guard-livereload', '~> 2.5', require: false
 end
