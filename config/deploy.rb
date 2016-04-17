@@ -1,5 +1,5 @@
 set :application, 'monmonhouse'
-set :deploy_user, 'gvszg'
+set :deploy_user, 'deploy'
 
 
 # setup repo details
