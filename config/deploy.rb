@@ -99,7 +99,7 @@ namespace :deploy do
   after 'deploy:publishing', 'deploy:restart'
 end
 
-namespace :deployrake do
+namespace :deploy do
   task :runrake do
     on roles(:all), in: :sequence, wait: 5 do
       within release_path do
