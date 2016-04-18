@@ -3,7 +3,7 @@
 # server '106.185.34.142', user: 'deploy', roles: %w{web app}
 
 set :stage, :production
-set :branch, "new"
+set :branch, "master"
 
 set :server_name, 'localhost'
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
