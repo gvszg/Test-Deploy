@@ -7,13 +7,12 @@ require 'capistrano/deploy'
 
 require 'capistrano/rbenv'
 
-set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, '2.2.4'
+# set :rbenv_type, :user # or :system, depends on your rbenv setup
+# set :rbenv_ruby, '2.2.4'
 # set :rbenv_custom_path, '/home/deploy/.rbenv/'
 
 require 'capistrano/bundler'
-require 'capistrano/rails'
-require 'capistrano/bundler'
+# require 'capistrano/rails'
 # require 'capistrano/passenger'
 
 # Includes tasks from other gems included in your Gemfile
@@ -31,7 +30,8 @@ require 'capistrano/bundler'
 # require 'capistrano/chruby'
 # require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
-# require 'capistrano/rails/migrations'
+require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+Dir.glob('lib/capistrano/**/*.rb').each { |r| import r }

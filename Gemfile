@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
-# if ENV["RAILS_ENV"] == "development"
-#   ruby '2.2.2'
-# elsif ENV["RAILS_ENV"] == "production" || ENV["RAILS_ENV"] == "staging"
-#   ruby '2.2.4'
-# end
 
 gem 'rails', '4.2.5'
 gem 'mysql2', '>= 0.3.13', '< 0.5'
@@ -24,6 +19,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem "jquery-fileupload-rails"
 gem 'bcrypt', '~> 3.1.7'
 gem 'gcm'
+gem 'unicorn'
 
 # For carawl cvs data setup
 gem 'nokogiri'
@@ -52,9 +48,11 @@ group :development do
   gem 'newrelic_rpm'
 
   #Capistrano setup
-  gem 'capistrano', '~> 3.4'
-  gem 'capistrano-rails', '~> 1.1', '>= 1.1.6'
-  gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
-  # gem 'capistrano-rails'
-  # gem 'capistrano-passenger'
+  gem 'byebug'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-sidekiq'
+  gem 'guard-livereload', '~> 2.5', require: false
 end

@@ -1,6 +1,23 @@
-set :deploy_to, '/home/deploy/monmonhouse'
+# set :deploy_to, '/home/deploy/monmonhouse'
+# set :stage, :production
+# server '106.185.34.142', user: 'deploy', roles: %w{web app}
+
 set :stage, :production
-server '106.185.34.142', user: 'deploy', roles: %w{web app}
+set :branch, "new"
+
+set :server_name, 'localhost'
+set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
+
+
+server '104.199.129.36', user: 'deploy', roles: %w{web app db}, primary: true
+set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
+
+set :rails_env, :production
+
+set :unicorn_worker_count, 5
+
+set :enable_ssl, false
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
