@@ -5,7 +5,7 @@
 set :application, 'monmonhouse'
 set :deploy_user, 'deploy'
 set :scm, :git
-set :repo_url, 'git@github.com:kosbrother/mongmongwoo.git'
+# set :repo_url, 'git@github.com:kosbrother/mongmongwoo.git'
 
 # set :stages, ["staging", "production"]
 # set :default_stage, "staging"
